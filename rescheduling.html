@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Reservation</title>
+<style>
+    
+     body {
+        font-family: Arial, sans-serif;
+        background-image: url('images/re.jpg'); 
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+	#opacity:0.5;
+    }
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        #background-color: rgba(128, 128, 128, 0.2);
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    .form-text {
+        text-align: center;
+    }
+    .input-wrapper {
+        margin-bottom: 20px;
+    }
+    .input-wrapper input,
+    .input-wrapper select,
+    .input-wrapper textarea {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+    .icon-wrapper {
+        position: relative;
+    }
+    .icon-wrapper ion-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+    }
+    .btn {
+        padding: 10px 20px;
+        #background-color: #007bff;
+	background-color: hsl(32, 74%, 41%);
+        color: #0C0C0C;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-secondary {
+        background-color: #6c757d;
+    }
+    .input-wrapper {
+    margin-bottom: 10px; /* or adjust as needed */
+}
+.headline-1,.form-text
+{
+ color:hsl(32, 74%, 41%);;
+ font-style: italic;
+ font-family: 'Times New Roman', Times, serif;
+
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="form reservation-form bg-black-10">
+            <form action="update_delete.php" method="post" class="form-left">
+                <h1 class="headline-1">Online Reservation</h2>
+                <p class="form-text">
+                    Booking request <a href="tel:+1 607 123 4567" class="link">+1 607 123 4567</a> or fill out the order form
+                </p>
+                <div class="input-wrapper">
+                    <input type="text" name="name" placeholder="Your Name" autocomplete="off" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" required>
+                    <input type="email" name="email" placeholder="Your Email" autocomplete="off" required>
+                </div>
+                <div class="input-wrapper">
+                    <div class="icon-wrapper">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                        <select name="person1" required>
+                            <option value="" disabled selected>Number of Persons</option>
+                            <option value="1-person">1 Person</option>
+                            <option value="2-person">2 Person</option>
+                            <option value="3-person">3 Person</option>
+                            <option value="4-person">4 Person</option>
+                            <option value="5-person">5 Person</option>
+                            <option value="6-person">6 Person</option>
+                            <option value="7-person">7 Person</option>
+                        </select>
+                    </div>
+                    <div class="icon-wrapper">
+                        <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+                        <input type="date" name="reservation-date" required>  
+			<!-- <input type="date" id="reservation-date" name="reservation-date" min="" onchange="updateMinDate()" required>  -->
+ 			
+
+
+
+
+
+                    </div>
+                    <div class="icon-wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                        <select name="person" required>
+                            <option value="" disabled selected>Select Time</option>
+                            <option value="08:00am">08 : 00 am</option>
+                            <option value="09:00am">09 : 00 am</option>
+                            <option value="10:00am">10 : 00 am</option>
+                            <option value="11:00am">11 : 00 am</option>
+                            <option value="12:00am">12 : 00 am</option>
+                            <option value="01:00pm">01 : 00 pm</option>
+                            <option value="02:00pm">02 : 00 pm</option>
+                            <option value="03:00pm">03 : 00 pm</option>
+                            <option value="04:00pm">04 : 00 pm</option>
+                            <option value="05:00pm">05 : 00 pm</option>
+                            <option value="06:00pm">06 : 00 pm</option>
+                            <option value="07:00pm">07 : 00 pm</option>
+                            <option value="08:00pm">08 : 00 pm</option>
+                            <option value="09:00pm">09 : 00 pm</option>
+                            <option value="10:00pm">10 : 00 pm</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="text-align: center; color:">
+               
+                	<button type="submit" class="btn" name="update">Update Details</button>
+		</div>
+                
+            </form>
+        </div>
+    </div>
+   <script src="script.js"></script> 
+</body>
+</html>
